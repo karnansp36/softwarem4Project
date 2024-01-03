@@ -1,38 +1,1510 @@
-.App {
-  text-align: center;
+/* Universal css property for general purpose */
+.flexContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+
+
+
+
+
+
+*{
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*   Navbar Style Container   */
+#navbarContainer{
+  width:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  height:100px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar{
+  width:95%;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.brandContainer{
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.brandLogo img{
+  width: 50px;
+}
+.brandName{
+  font-size: 19pt;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 650;
+  color:rgb(13, 13, 13);
+  padding-left: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*   Navbar  Elements   */
+.navelementsContainer{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.navElements{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.navElements div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 3px;
+}
+.navElements div:hover a{
+  background-color: #ffffff;
+  
+}
+.navElements div a{
+  text-decoration: none;
+  font-size: 13pt;
+  font-family: 'DM Sans', sans-serif;
+  color:black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  Icons    */
+.iconsContainer{
+  width:25%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+.iconsContainer div{
+  width: 50px;
+  height: 50px;
+  border-radius:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0 5px;
+}
+.menuBtn{
+  display: none;
+}
+
+/*   Navbar  Elements   */
+.mobileNavbar{
+  width: 100%;
+  height: 40vh;
+  background-color: #efefef;
+  display: none;
+  position: absolute;
+  top:100px;
+  left:0;
+}
+.navElementsMobile div{
+  height:100%;
+}
+
+.navElementsMobile div a{
+  text-decoration: none;
+  color:black;
+  width: 100%;
+  height:100%;
+  padding:0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navElementsMobile div:hover a{
+  background-color: white;
+}
+
+.navelementsContainerMobile{
+  height: 80%;
+}
+.navElementsMobile{
+  width:100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.iconsContainerMobile{
+  height: 20%;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.iconsContainerMobile div{
+  width: 50px;
+  height: 50px;
+  border-radius:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0 5px;
+}
+/*   Navbar Completed   */
+
+
+.headerContainer{
+  width:100%;
+  height:600px;
+  background-image: url(https://mobirise.com/extensions/softwarem4/mobile-app/assets/images/mbr.jpg);
+  background-repeat: no-repeat;
+  background-size:120%;
+  background-position: 20% 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.header{
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.headerSubTitle{
+  font-size: 13pt;
+  font-weight: 600;
+  font-family: 'DM Sans',sans-serif;
+  padding: 10px 0;
+}
+.headerTitle{
+  font-size:3.5rem;
+  font-weight: 700;
+  padding: 10px 0;
+
+}
+.headerPara{
+  padding: 30px 0;
+}
+.header button{
+  width:180px;
+  height: 60px;
+  border-radius:5px;
+  border:none;
+  font-size: 12pt;
+  font-weight: 600;
+  background-color: #f7d9c4;
 }
 
-.App-link {
-  color: #61dafb;
+/* Consultation Card */
+#consultaionCard{
+  width:100%;
+  height: 700px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.consultaion{
+  width:100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.consultaion .imgContainer{
+  position: absolute;
+  top:10%;
+  left:15%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.consultaion .imgContainer img{
+  width: 50%;
+  border-radius: 10px;
+}
+.consultationContent{
+  width:60%;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  background-color: white;
+  padding-left: 18%;
+  margin-left: 10%;
+  padding-top: 20px ;
+  padding-bottom:20px ;
+}
+.consultationContent .techText{
+  font-size:14pt;
+  font-weight: 600;
+  color:gray;
   }
-  to {
-    transform: rotate(360deg);
+.consultationContent .consultationTitle{
+  font-size: 3rem;
+  font-weight: 600;
+}
+.consultationContent .consultationPara{
+  font-size: 13pt;
+  color: gray;
+  width: 70%;
+}
+.consultationContent .pointsContainer{
+  font-weight: 600;
+  font-size: 14pt;
+}
+.consultationContent .pointsContainer span{
+  font-weight: 200;
+  font-size: 12pt;
+  padding-right: 10px;
+}
+.consultationContent button{
+  width: 200px;
+  height: 50px;
+  font-size: 11pt;
+  font-weight: 600;
+  background-color: #dce8eb;
+  border:none;
+  border-radius: 5px;
+}
+.consultationContent button:hover{
+  background-color: rgb(18, 18, 18);
+  color:white;
+  transition: .3s;
+}
+
+/* Membership card */
+#membershipCardContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 80px ;
+}
+#membershipCardContainer .cardContainer{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.memberT1{
+  font-size: 4rem;
+  font-weight: 600;
+  padding-bottom:40px;
+}
+.memberT2{
+  font-size: 14pt;
+  color:gray;
+  padding-top:40px
+}
+/* Card */
+.cardDetail{
+  width: 320px;
+  height: 550px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items:flex-start;
+  margin: 20px 0;
+
+
+}
+.cardSub{
+  font-size: 12pt;
+  padding-left: 30px;
+}
+.cardPrice{
+  font-size: 4rem;
+  font-weight: 700;
+  padding-left: 30px;
+}
+.cardDescription{
+  font-size: 13pt;
+  padding-left: 30px;
+}
+.cardDescription span{
+  padding-right: 15px;
+}
+.cardBtn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  
+  
+
+}
+.cardBtn button{
+  width: 200px;
+  height: 60px;
+  font-size: 13pt;
+  font-weight: 700;
+  background-color: #dce8eb;
+  border-radius: 5px;
+  border:none;
+  color:#4986b3;
+}
+.cardBtn button:hover{
+  background-color: #aecdd6;
+  color:white;
+}
+.cardBtn button:active{
+  background-color: #d9a23c;
+  border:1px solid #f8ad21;
+
+}
+
+
+/* percentage container */
+#percentageContainer{
+  width: 100%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dce8eb;
+  padding: 100px 0;
+
+}
+.percentage{
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.percentageIcon{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #ff8484;
+}
+.percent{
+  margin-left: 20px;
+}
+.percent .percentNumber{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+
+
+.faqAccordian {
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 60px; /* Set initial max-height to 0 */
+  transition: max-height 0.3s ease-out;
+  background-color: white;
+}
+
+.answerOpen {
+  max-height: 200px; /* Adjust the value based on your content height */
+  
+}
+
+
+/*Faq conatiner*/
+#faqContainer{
+  width: 100%;
+  height:820px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  background-color: #efefef;
+}
+.faq{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.accordianContainer{
+  width: 100%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.faqAnswerContent{
+  margin-left: 70px;
+}
+.faqImgContainer{
+  width: 100%;
+}
+.faqImgContainer img{
+  width: 100%;
+  border-radius: 10px;
+}
+.faqAnswer {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  height: 60px;
+  background-color: #ffffff;
+  
+}
+.faqTitle{
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 10px 0;
+  width: 80%;
+}
+.accordion-icon {
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-icon {
+  transform: rotate(45deg);
+}
+.fqanswer{
+  padding: 10px 20px;
+}
+/* Faq completed */
+
+
+
+/* Intergration for mobile */
+#intergrationContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.interTxt{
+  font-size: 12pt;
+  color:gray;
+  padding-top: 40px ;
+  text-align: center;
+}
+.mobileIntergration{
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom:30px;
+  text-align: center;
+}
+.intergration{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  flex: 200px;
+  flex-wrap: wrap;
+
+}
+.interContainer{
+  width: 350px;
+  height: 350px;
+  padding: 40px 50px;
+  border:2px solid #dce8eb;
+  border-radius: 20px;
+  margin: 20px 0px;
+
+}
+.interContainer a{
+  font-size: 14pt;
+  color:black;
+}
+.logo{
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #dce8eb;
+
+}
+.logoContainer{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  
+}
+.logoText{
+  font-size: 1.5rem;
+  font-weight: 600; 
+  padding-left: 10px;
+}
+.interPara{
+  padding: 10px 0;
+  color:gray;
+  font-size: 14pt;
+
+}
+.interContainer:hover{
+  border:none;
+}
+.interContainer:hover .logo{
+  background-color: #f3d4c7;
+}
+
+/*  Team member protfolio container  */
+#teamMemberContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #efefef;
+  padding-bottom: 50px ;
+}
+.teamMember{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.teamContainer{
+  width: 270px;
+  height: 400px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: white;
+  margin:15px 5px;
+  padding-top: 20px;
+
+}
+.teamImgContainer{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+.teamImgContainer img{
+  height: 100%;
+  object-position: -10px;
+
+}
+
+.mediaIconsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  align-items: center;
+}
+.faceIcon{
+  width: 40px;
+  height: 40px;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius:10px
+}
+.memberName{
+  font-size:1.5rem;
+  font-weight: 600;
+}
+.nameContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.experts{
+  font-size: 12pt;
+  color:gray;
+  font-weight: 600;
+  padding-top: 60px;
+}
+.membertitle{
+  font-size: 4rem;
+  font-weight:600;
+  padding-bottom: 40px;
+}
+
+/* About Us Container */
+
+#aboutUsContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutUs{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px ;
+}
+.aboutContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutFirsst{
+  width: 49%;
+}
+.aboutSecond{
+  width: 49%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  flex-direction: column;
+}
+.barTextContainer{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+}
+.barContainer{
+  padding:25px 0;
+}
+.outerBar{
+  width: 100%;
+  height: 7px;
+  background-color: #efefef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.innerBar{
+  width: 92%;
+  height: 100%;
+  background-color: #000000;
+}
+.innerBar1{
+  width: 71% ;
+  height: 100%;
+  background-color: black;
+}
+.innerBar2{
+  width: 53%;
+  height: 100%;
+  background-color: black;
+}
+.subAbout{
+  font-size: 13pt;
+  font-weight: 600;
+  color: rgb(103, 103, 103);
+  padding-bottom: 20px;
+}
+.headAbout{
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color:rgb(45, 44, 44);
+}
+.paraAbout{
+  line-height: 1.8rem;
+  font-size: 13pt;
+  color:gray;
+}
+.barTitleText{
+  font-size: 13pt;
+  font-weight: 600;
+}
+.barPercentage{
+  font-size: 13pt;
+  font-weight: 600;
+}
+.softwareImgageContainer{
+  width: 60%;
+  display: flex;
+  margin:20px 0
+
+}
+.softwareImgage1{
+  width: 50%;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 15px;
+  margin-right: 1%;
+}
+.softwareImgage1 img{
+  width: 100%;
+}
+.softwareImgage2{
+  width: 50%;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 15px;
+  margin-left: 1%;
+}
+.softwareImgage2 img{
+  width: 100%;
+  object-position: 0px -60px;
+}
+.longBarContainer{
+  width: 60%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.longBarContainer img{
+  width: 100%;
+  object-position: 0 -160px;
+}
+#clientContainer{
+  width: 100%;
+  height: 500px;
+  background-color: #14191e;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.clientTitle{
+  font-size: 3rem;
+  color:white;
+  font-weight: 600;
+}
+.client{
+  width: 60%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+ 
+}
+.clientName{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  /* box-shadow: 0 80px 0 -40px rgba(255, 255, 255, 0.533); */
+}
+.shadow{
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.409);
+  height: 50px;
+  border-bottom-left-radius: 20px ;
+  border-bottom-right-radius: 20px ;
+
+}
+
+.clientName img{
+  width: 15%;
+}
+.clientName img:hover{
+ animation: client 0.6s ease-in-out;
+}
+@keyframes client {
+  0%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(-50px);
+    z-index:-1;
+  }
+  75%{
+    transform: translateY(50px);
+    z-index:-1;
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+}
+
+/* Form Container style   */
+
+#formContainer{
+  width: 100%;
+  height: 630px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.formImage{
+  width: 50%;
+  overflow: hidden;
+}
+.formImage img{
+  width: 100%;
+}
+.formDetails{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dce8eb;
+}
+.formDetailsContainer{
+  width:60%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.formNewsLetter{
+  font-size: 13pt;
+  color:gray;
+  width: 80%;
+
+}
+.formTitle{
+  font-size: 3rem;
+  width: 80%;
+}
+#name, #email{
+  width: 80%;
+  height: 55px;
+  border-radius: 10px;
+  outline: none;
+  border:none;
+  padding-left: 30px;
+  
+}
+.subscribeContainer{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.subscribeBtn{
+  width: 200px;
+  height: 50px;
+  background-color: #000000;
+  color:white;
+  border:none;
+  font-size: 13pt;
+  border-radius: 5px;
+
+}
+
+/* Feedback container  */
+#feedbackContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  padding: 50px 0;
+}
+.feedSubTitle{
+  width: 60%;
+  font-size: 13pt;
+  color:gray;
+}
+.feedTitle{
+  width: 60%;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 30px 0;
+
+}
+.fbackContainer{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedContainer{
+  max-width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  margin: 20px 0;
+  border-radius: 10px;
+
+}
+.feedImage{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform: translate(20%, 20%);
+}
+.feedImage img{
+  width: 100%;
+  object-position: -10px 0;
+
+}
+.feedPara{
+  padding: 20px 30px;
+  font-size: 19pt;
+  color:gray;
+}
+.feedPersonalContainer{
+  padding: 20px 30px;
+}
+.feedNameContainer{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.feedNameProfession{
+  color:gray;
+}
+.feedquotes{
+  width: 25%;
+  margin-left:15px;
+  margin-top: 10px;
+}
+.feedquotes img{
+  width: 100%;
+}
+#mapContainer{
+  width: 100%;
+  height: 400px;
+}
+#mapContainer iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer Container */
+#footerContianer{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232323;
+}
+.footer{
+  width: 60%;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.mainlinks{
+  color:white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.footerContain{
+  width: 35%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+}
+.inTouch{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color:white;
+  text-align: start;
+  width: 60%;
+  padding-bottom: 12px;
+}
+.footerMain{
+  width: 35%;
+}
+.touchGet{
+  width: 30%;
+  height: 69%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.getTouch{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  color:white;
+  flex-direction: column;
+  align-items: start;
+}
+.aboutContainer1{
+  width: 35%;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.aboutTitle1{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color:white;
+  width: 60%;
+
+}
+.sociaIcons{
+  width: 100%;
+  color:white;
+  font-size: 1.5rem;
+}
+.aboutPara{
+  width: 60%;
+  color:white;
+  font-size: 13pt;
+  line-height: 1.8em;
+}
+.footerMain{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.firstMain{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  height: 100%;
+  color:white;
+
+}
+.secondMain{
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  color:white;
+  padding-top: 4px;
+}
+.verticalLine{
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+.socialLogoContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+.socialLogoContainer div{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border:1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialLogoContainer div:hover{
+  background-color: #f7d9c4;
+}
+.sContact{
+  width: 60%;
+}
+.contactBtns{
+  width: 200px;
+  height: 60px;
+  font-size: 13pt;
+  border:none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f7d9c4;
+}
+.contactBtns:hover{
+  background-color: white;
+ 
+  
+
+}
+.faceIcon:hover{
+  background-color: #f3d8c6;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:750px){
+  .navelementsContainer{
+    display: none;
+  }
+  .iconsContainer{
+    display: none;
+  }
+  .menuBtn{
+    display: block;
+  }
+  .mobileNavbar.open{
+    display: block;
+  }
+  .headerContainer{
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .headerTitle{
+    font-size: 2.5rem;
+  }
+  .header{
+    width:60%;
+    justify-content: center;
+    align-items: center;
+  }
+  .header button{
+    padding: 15px 0;
+  }
+  .consultaion .imgContainer{
+    position:relative;
+    left:0;
+    width: 100%;
+    padding: 0;
+    margin-bottom:20px;
+  }
+  .consultaion .imgContainer img{
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  .consultaion{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding:0 0;
+    width: 90%;
+  }
+  #consultaionCard{
+    height: auto;
+    
+  }
+  .consultationPara{
+    width: 100%;
+  }
+  .consultationTitle{
+    font-size: 14pt;
+  }
+  .consultationContent{
+    width: 100%;
+    margin-left: 0px;
+    height: 480px;
+    border-radius:10px;
+    padding: 15px;
+    padding-left:30px;
+    
+  }
+  .memberT1{
+    font-size: 2rem;
+  }
+  #membershipCardContainer{
+    width: 100%;
+   
+  }
+  #membershipCardContainer .cardContainer{
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .cardContainer .cardDetail{
+    width: 320px;
+    padding-left: 10px;
+    margin-left: 15px;
+  }
+  .cardPrice{
+    font-size: 3rem;
+  }
+  
+  .percentage{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #faqContainer{
+    height: auto;
+  }
+  .faq{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .faqAnswerContent{
+    margin: 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    
+  }
+  .faqTitle{
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 30px;
+
+  }
+  .fqsub{
+    padding-bottom: 20px 0;
+  }
+  
+  .faqImgContainer{
+    width: 90%;
+  }
+  .accordianContainer{
+    height: 400px ;
+  }
+  .interContainer{
+    width: 90%;
+  }
+  .intergration{
+    width: 100%;
+    justify-content: center;
+
+  }
+  .teamContainer{
+    width: 100%;
+
+  }
+  .teamMember{
+    width: 90%;
+  }
+  .membertitle{
+    font-size: 2rem;
+  }
+  
+  .aboutUs .aboutContainer{
+    flex-direction: column;
+    width: 90%;
+    
+  }
+  
+  .softwareImgageContainer{
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+  .softwareImgage1{
+    width: 100%;
+    margin:20px 0;
+  }
+  .softwareImgage2{
+    width: 100%;
+    margin: 20px 0;
+  }
+  .longBarContainer{
+    width: 95%;
+    height: 300px;
+  }
+  .longBarContainer img{
+    width: 100%;
+    object-position: 0;
+    
+  }
+  .aboutFirsst{
+    width: 100%;
+    text-align: center;
+  }
+  .aboutSecond{
+    width: 100%;
+  }
+  .headAbout{
+    font-size: 2.1rem;
+  }
+  .paraAbout{
+    font-size: 11pt;
+    
+  }
+  .aboutContainer{
+    width: 100%;
+  }
+  .aboutUs{
+    width: 95%;
+  }
+  #clientContainer{
+    width: 100%;
+    height: auto;
+  }
+  .clientName{
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+
+  }
+  .shadow{
+    display: none;
+  }
+  .clientName img{
+    width: 80%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  #formContainer{
+    height: auto;
+    width: 100%;
+  }
+  #formContainer .form{
+    flex-direction: column;
+    height: 800px;
+    width: 100%;
+  }
+  .formImage{
+    width: 100%;
+  }
+  .formDetails{
+    width: 100%;
+  }
+  .formDetailsContainer{
+    width: 85%;
+  }
+  .formTitle{
+    font-size: 2rem;
+    width: 100%;
+  }
+  #name{
+    width: 100%;
+  }
+  #email{
+    width: 100%;
+  }
+  .fbackContainer{
+    flex-direction: column;
+    width: 100%;
+  }
+  .feedContainer{
+    width: 100%;
+
+  }
+  .feedTitle{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+  .feedSubTitle{
+    text-align: center;
+  }
+  .footer{
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0;
+    
+  }
+  #footerContianer{
+    height: auto;
+    
+  }
+  
+  .footerContain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .touchGet{
+    width: 100%;
+    padding: 30px 0;
+  }
+  .getTouch{
+    width: 60%;
+    align-items: start;
+  }
+  .inTouch{
+    padding: 20px 0;
+  }
+  .aboutTitle1{
+    padding: 20px 0;
+  }
+  .aboutContainer1{
+    width: 100%;
+  }
+ 
+}
+
+@media only screen and (min-width:750px){
+  .imgContainer {
+    width: 45%;
   }
 }
